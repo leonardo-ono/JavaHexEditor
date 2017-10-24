@@ -1,0 +1,10 @@
+Hex Editor
+
+Keyboard Shortcuts
+
+ARROW KEYS - move cursor
+BACKSPACE  - delete previous byte
+DEL        - delete current byte
+INS        - insert mode on/off
+CTR + INS  - insert byte at current cursor position
+CTR + HOME - change start address
