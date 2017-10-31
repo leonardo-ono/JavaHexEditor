@@ -86,7 +86,7 @@ public class ViewData extends JPanel implements KeyListener {
 
         if (currentRows != model.getRows()) {
             currentRows = model.getRows();
-            setPreferredSize(new Dimension(getPreferredSize().width, (currentRows + 1) * fontHeight));
+            setPreferredSize(new Dimension(fontWidth * (10 + 3 * model.getCols()), (currentRows + 1) * fontHeight));
             scrollPane.updateUI();
         }
                 
@@ -214,7 +214,7 @@ public class ViewData extends JPanel implements KeyListener {
         scrollPane.getViewport().scrollRectToVisible(rect);
         
         currentRows = model.getRows();
-        setPreferredSize(new Dimension(getPreferredSize().width, (currentRows + 1) * fontHeight));
+        setPreferredSize(new Dimension(fontWidth * (10 + 3 * model.getCols()), (currentRows + 1) * fontHeight));
         repaint();
         invalidate();
         updateUI();
@@ -260,7 +260,7 @@ public class ViewData extends JPanel implements KeyListener {
         }
         
         currentRows = model.getRows();
-        setPreferredSize(new Dimension(getPreferredSize().width, (currentRows + 1) * fontHeight));
+        setPreferredSize(new Dimension(fontWidth * (10 + 3 * model.getCols()), (currentRows + 1) * fontHeight));
         repaint();
         invalidate();
         updateUI();
@@ -282,7 +282,7 @@ public class ViewData extends JPanel implements KeyListener {
         model.saveData();
         
         currentRows = model.getRows();
-        setPreferredSize(new Dimension(getPreferredSize().width, (currentRows + 1) * fontHeight));
+        setPreferredSize(new Dimension(fontWidth * (10 + 3 * model.getCols()), (currentRows + 1) * fontHeight));
         repaint();
         invalidate();
         updateUI();

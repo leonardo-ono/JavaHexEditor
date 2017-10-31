@@ -58,9 +58,11 @@ public class View extends javax.swing.JFrame implements ViewDataListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        labelStatusBar = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         viewData1 = new br.ol.hexeditor.view.ViewData();
-        labelStatusBar = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuFile = new javax.swing.JMenu();
         menuItemNew = new javax.swing.JMenuItem();
@@ -72,6 +74,18 @@ public class View extends javax.swing.JFrame implements ViewDataListener {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hex Editor");
+        setPreferredSize(new java.awt.Dimension(600, 500));
+
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        labelStatusBar.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
+        labelStatusBar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        labelStatusBar.setPreferredSize(new java.awt.Dimension(4, 20));
+        jPanel1.add(labelStatusBar, java.awt.BorderLayout.PAGE_START);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
+
+        jPanel2.setLayout(new java.awt.BorderLayout());
 
         viewData1.setPreferredSize(new java.awt.Dimension(400, 300));
 
@@ -79,17 +93,18 @@ public class View extends javax.swing.JFrame implements ViewDataListener {
         viewData1.setLayout(viewData1Layout);
         viewData1Layout.setHorizontalGroup(
             viewData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 758, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
         );
         viewData1Layout.setVerticalGroup(
             viewData1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 443, Short.MAX_VALUE)
+            .addGap(0, 467, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(viewData1);
 
-        labelStatusBar.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
-        labelStatusBar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel2.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         menuFile.setText("File");
 
@@ -141,21 +156,6 @@ public class View extends javax.swing.JFrame implements ViewDataListener {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 762, Short.MAX_VALUE)
-            .addComponent(labelStatusBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelStatusBar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -195,6 +195,8 @@ public class View extends javax.swing.JFrame implements ViewDataListener {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelStatusBar;
     private javax.swing.JMenu menuAbout;
